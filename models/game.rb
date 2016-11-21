@@ -9,7 +9,7 @@ class Game
     @c_choice = c_choice
   end
 
-  def win_lose()
+  def win_lose(game)
     if game.c_choice == "rock"
       if game.u_choice == "scissors"
         true
@@ -39,9 +39,9 @@ class Game
     game = Game.new(u_choice, c_choice)
     if game.u_choice == game.c_choice
       puts "It's a tie! Try again"
-    elsif game.win_lose() == true
+    elsif game.win_lose(game) == true
       puts "#{@c_choice} beats #{@u_choice}! Computer wins"
-    elsif game.win_lose() == false
+    elsif game.win_lose(game) == false
       puts "#{@u_choice} beats #{@c_choice}! You win"
     end
   end
