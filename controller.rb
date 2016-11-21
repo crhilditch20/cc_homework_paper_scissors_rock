@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/play/:choice1/:choice2' do
-  return "#{params[:choice1]} beats #{params[:choice2]}! Play again"
+  return "#{params[:choice1]} vs #{params[:choice2]}!"
   # choice1 = params[:choice1]
   # choice2 = params[:choice2]
   # @result = game.play_game(choice1, choice2)
