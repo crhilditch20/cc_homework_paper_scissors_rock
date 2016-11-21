@@ -5,9 +5,8 @@ class TestCalculator < Minitest::Test
 
 
 def test_play_game
-  game1 = Game.new("rock", "rock")
-  result = game1.play_game
-  assert_equal("try again", result)
+  result = Game.play_game("rock", "scissors")
+  assert_equal("rock beats scissors! You win", result)
 end
 
 
